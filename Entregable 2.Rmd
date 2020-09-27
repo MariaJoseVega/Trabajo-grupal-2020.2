@@ -1,0 +1,270 @@
+---
+title: "Entregable 2"
+output: html_notebook
+---
+
+####LIBRERIAS
+```{r}
+library(jsonlite)
+library(stringr)
+library(readr)
+library(htmltab)
+library(dplyr)
+library(htmltab)
+library(rio)
+library(data.table)
+library(DescTools)
+library(tidyr)
+library(lubridate)
+```
+
+
+####AYUDA ECONOMICA
+LIMPIEZA INICIAL
+```{r}
+#EXTRAEMOS LA DATA
+library(rio)
+linkayuda="https://github.com/OxCGRT/covid-policy-tracker/raw/master/data/OxCGRT_latest.csv"
+dataayuda=import(linkayuda)
+
+#ELIMINACION DE COLUMNAS NO NECESARIAS
+dataayuda = dataayuda[,c(1:5, 21)]
+
+#ELIMINAMOS LAS REGIONES (SOLO NOS INTERESAN LOS PAISES)
+#USA
+dataayuda <- dataayuda[-c(48601	:62640), ]
+
+#UK
+dataayuda <- dataayuda[-c(16741	:17820), ]
+
+#ELIMINAMOS LAS COLUMNAS DE REGION
+dataayuda <- dataayuda[,-c(3, 4) ]
+
+#SIMPLIFICAMOS LOS NOMBRES
+names(dataayuda) = c("pais", "code", "fecha", "apoyo")
+
+#TRANSFORMAMOS LA COLUMNA 3 EN FECHAS
+dataayuda[ , 3 ] <- ymd(dataayuda[, 3])
+```
+
+BASE DIA 1
+```{r}
+#CASOS CONFIRMADOS DE CONTAGIOS
+confirmed <- "https://raw.github.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
+
+dataconfirmados<-import(file = confirmed)%>%
+  mutate(type="datacon")%>% 
+  tidyr::gather(Fecha,Valor,-c(type,"Province/State",
+                        "Country/Region",Lat,Long))
+prueba4= dataconfirmados%>%
+  filter(Valor>0)
+
+#JUNTAMOS LAS PROVINCIAS A UN SOLO PAIS
+names(prueba4)[2]="pais"
+names(prueba4)[6]="fecha"
+prueba4=aggregate(Valor # dependientes
+          ~ pais + fecha, # nivel
+          data = prueba4,    # data
+          sum)       # operacion
+
+#ALINEAMOS CODIGOS Y PAISES (DATA SOLO DE PAISES Y CODIGOS)
+datacode=dataayuda
+datacode$fecha=NULL
+datacode$apoyo=NULL
+
+
+#ELIMINAMOS PAISES REPETIDOS
+datacode=datacode[!duplicated(datacode$pais),]
+
+#DIA 7
+dia7=prueba4%>%
+  group_by(pais)%>%
+  mutate(dia7 = ifelse(fecha==nth(fecha,7), 1, 0))%>%
+  filter(dia7==1)
+
+dia7$fecha=mdy(dia7$fecha)
+str(dia7$fecha)
+dia7$fecha=as.Date(dia7$fecha)
+
+#DIA 7 Y MERGE CON CODIGOS
+dia7_final=merge(dia7,datacode, by.x="pais", by.y="pais")
+```
+
+JUNTAMOS LOS DIAS CON LOS DATOS PARA CADA DIA
+```{r}
+#CREACION DEL ID Y FECHA DEL DIA 7
+dia7_final$DIA7=paste(dia7_final$code,dia7_final$fecha)
+
+dia7_final$pais=NULL
+dia7_final$dia7=NULL
+dia7_final$code=NULL
+
+dataayuda$DIA7=paste(dataayuda$code,dataayuda$fecha)
+dataayuda$fecha=NULL
+head(dataayuda)
+
+#AGREGAMOS LOS DATOS DE APOYO ECONOMICO
+APOYOECO=merge(dia7_final,dataayuda, by.x="DIA7", by.y = "DIA7")
+APOYOECO$DIA7=NULL
+APOYOECO$Valor=NULL
+
+#TABLA DEFINITIVA
+write.csv(APOYOECO, file = "Ayuda economica_Limpia.csv", row.names = F)
+dataayudafinal=import("Ayuda economica_Limpia.csv")
+```
+
+
+
+
+####DENSIDAD DE LA POBLACION
+EXTRACCION Y LIMPIEZA INICIAL
+```{r}
+#EXTRAEMOS LA DATA
+library(rio)
+linkdensidad="https://github.com/MariaJoseVega/Trabajo-grupal-2020.2/raw/master/Excel%20densidad.xlsx.xls"
+datadensidad=import(linkdensidad)
+
+#ELIMINAMOS FILAS INNCESESARIAS INICIALES
+datadensidad <- datadensidad[-c(1, 2), ]
+
+#LA PRIMERA FILA SE VUELVE HEADLINE
+names(datadensidad) <- as.matrix(datadensidad[1, ])
+datadensidad <- datadensidad[-1, ]
+datadensidad[] <- lapply(datadensidad, function(x) type.convert(as.character(x)))
+
+#ELIMINAMOS LAS COLUMNAS INNECESARIAS
+datadensidad = datadensidad[,c(1, 2, 63)]
+
+#SIMPLIFICAMOS LOS NOMBRES DE LAS COLUMNAS
+names(datadensidad) = c("pais", "code", "2018")
+
+```
+
+LIMPIEZA MAS PROFUNDA
+```{r}
+#ORDENAMOS LA DATA ALFABETICAMENTE
+prueba3<-arrange(datadensidad, pais, code, 2018)
+
+#ELIMINAMOS LAS FILAS INNECESARIAS
+prueba3 <- prueba3[-c(8, 9, 38, 40, 41, 61:64, 73:77, 81, 99, 100, 104, 106:109, 130:133, 135, 142:144, 158:161, 178, 182, 183, 185, 186, 196, 197, 215, 219, 220, 228:230, 253, 261), ]
+
+#NOMBRE FINAL
+datadensidadfinal<-prueba3
+
+#TABLA FINAL
+write.csv(datadensidadfinal, file = "Densidad_Limpia.csv", row.names = T)
+import("Densidad_Limpia.csv")
+```
+
+
+
+####TASA DE DESEMPLEO
+```{r}
+#EXTRAEMOS LA DATA
+Linkdesempleo="https://www.indexmundi.com/map/?v=74&l=es"
+Xpathdesempleo='//*[@id="gvDataCountry"]'
+
+datadesempleo = htmltab(doc = Linkdesempleo, 
+                     which =Xpathdesempleo) 
+
+#ELIMINAMOS LAS COLUMNAS INNCESARIAS
+datadesempleo$`Año`<- NULL
+
+#SIMPLIFICAMOS LOS NOMBRES
+names(datadesempleo) = c("pais", "tasa")
+
+#ORDENAMOS LA DATA ALFABETICAMENTE
+datadesempleo<-arrange(datadesempleo, pais, tasa)
+```
+
+DATA PAISES (PARA INCLUIR LOS CODIGOS DE LOS PAISES)
+```{r}
+data_salud <- "https://raw.githubusercontent.com/AriannaNKZC/TrabajoGrupal/bases-de-datos/API_SH.XPD.CHEX.GD.ZS_DS2_es_csv_v2_1347692.csv"
+gasto_salud=import(data_salud)
+
+gasto_salud = gasto_salud[,c(1, 2)]
+gasto_salud = gasto_salud[-c(1),]
+
+names(gasto_salud) = c("pais", "code")
+
+#MERGE (PARA AGREGAR LOS CODIGOS)
+prueba1=merge(datadesempleo,gasto_salud,all.x=T,all.y=T)
+```
+
+PRUEBA 1, LIMPIEZA DEL MERGE
+```{r}
+#ELIMINAMOS LAS FILAS INNCESARIAS
+prueba1 = prueba1[-c(1, 3:5, 8:11, 21:25, 28, 43, 86, 93, 94, 99:102, 108, 131: 134, 190, 192, 191, 198, 206, 212:215, 217:220, 228, 233, 234, 237, 246, 251, 252, 266, 267, 287, 288, 295, 308),]
+
+#CAMBIAMOS NOMBRES
+
+prueba1$pais =   gsub("Arabia Saudita", "Arabia Saudí", prueba1$pais)
+prueba1$pais =   gsub("Bahráin", "Bahrein", prueba1$pais)
+prueba1$pais =   gsub("Belarús", "Bielorrusia", prueba1$pais)
+prueba1$pais =   gsub("Benín", "Benin", prueba1$pais)
+prueba1$pais =   gsub("Birmania; Myanmar", "Birri", prueba1$pais)
+prueba1$pais =   gsub("Birri", "Birmania", prueba1$pais)
+prueba1$pais =   gsub("Myanmar", "Birmania", prueba1$pais)
+prueba1$pais =   gsub("Bosnia y Hercegovina", "Bosnia y Herzegovina", prueba1$pais)
+prueba1$pais =   gsub("Botsuana", "Botswana", prueba1$pais)
+prueba1$pais =   gsub("Brunei Darussalam", "Brunéi", prueba1$pais)
+prueba1$pais =   gsub("Brunéi", "Brunei", prueba1$pais)
+prueba1$pais =   gsub("Congo, República del", "Congo", prueba1$pais)
+prueba1$pais =   gsub("Congo, República Democrática del", "República Democrática del Congo", prueba1$pais)
+prueba1$pais =   gsub("Côte d'Ivoire", "Costa de Marfil", prueba1$pais)
+prueba1$pais =   gsub("Corea, República Popular Democrática de", "Corea del Norte", prueba1$pais)
+prueba1$pais =   gsub("Corea, República de", "Corea del Sur", prueba1$pais)
+prueba1$pais =   gsub("Egipto, República Árabe de", "Egipto", prueba1$pais)
+prueba1$pais =   gsub("Federación de Rusia", "Rusia", prueba1$pais)
+prueba1$pais =   gsub("Fiyi", "Fiji", prueba1$pais)
+prueba1$pais =   gsub("Hong Kong, Región Administrativa Especial", "Hong Kong", prueba1$pais)
+prueba1$pais =   gsub("Irán, República Islámica del", "Irán", prueba1$pais)
+prueba1$pais =   gsub("Kazajstán", "Kazajistán", prueba1$pais)
+prueba1$pais =   gsub("Kenia", "Kenya", prueba1$pais)
+prueba1$pais =   gsub("República Democrática Popular Lao", "Laos", prueba1$pais)
+prueba1$pais =   gsub("Lesoto", "Lesotho", prueba1$pais)
+prueba1$pais =   gsub("Macedonia del Norte", "Macedonia", prueba1$pais)
+prueba1$pais =   gsub("República de Moldova", "Moldavia", prueba1$pais)
+prueba1$pais =   gsub("Malaui", "Malawi", prueba1$pais)
+prueba1$pais =   gsub("Nueva Zelandia", "Nueva Zelanda", prueba1$pais)
+prueba1$pais =   gsub("Palaos", "Palau", prueba1$pais)
+prueba1$pais =   gsub("Papua-Nueva Guinea", "Papua Nueva Guinea", prueba1$pais)
+prueba1$pais =   gsub("República de Moldova", "Moldavia", prueba1$pais)
+prueba1$pais =   gsub("República Árabe Siria", "Siria", prueba1$pais)
+prueba1$pais =   gsub("Rwanda", "Ruanda", prueba1$pais)
+prueba1$pais =   gsub("Timor-Leste", "Timor Oriental", prueba1$pais)
+prueba1$pais =   gsub("Viet Nam", "Vietnam", prueba1$pais)
+prueba1$pais =   gsub("Yemen, Rep. del", "Yemen", prueba1$pais)
+prueba1$pais =   gsub("Viet Nam", "Vietnam", prueba1$pais)
+prueba1$pais =   gsub("Zimbabue", "Zimbabwe", prueba1$pais)
+prueba1$pais =   gsub("Kirguizistán", "Kirguistán", prueba1$pais)
+prueba1$pais =   gsub("Bután", "Bhután", prueba1$pais)
+prueba1$pais =   gsub("Suriname", "Surinam", prueba1$pais)
+prueba1$pais =   gsub("Tanzanía", "Tanzania", prueba1$pais)
+
+#JUNTAMOS LAS FILAS CON NOMBRES IGUALES
+prueba2=group_by(prueba1, pais) %>% 
+  summarize(tasa=max(tasa, na.rm = TRUE),
+            code=max(code, na.rm= TRUE))
+
+#CAMBIAMOS EL ORDEN Y NOMBRE FINAL
+datadesempleofinal <- prueba2[c("pais", "code", "tasa")]
+
+#TABLA FINAL
+write.csv(datadesempleofinal, file = "Desempleo_Limpia.csv", row.names = F)
+datadesempleofinal=import("Desempleo_Limpia.csv")
+
+```
+
+
+
+####MERGE DE LAS 3 TABLAS
+```{r}
+DATA1=merge(dataayudafinal,datadensidad, by.x="code", by.y="code")
+DATAFINAL=merge(DATA1,datadesempleofinal, by.x="code", by.y="code")
+
+DATAFINAL = DATAFINAL[,c(1:4, 6, 8)]
+names(DATAFINAL) = c("Code", "Fecha (Dia 7 de cada pais)", "Pais", "Apoyo Economico", "Densidad (2018)", "Desempleo (% al 2019)")
+```
+
+
