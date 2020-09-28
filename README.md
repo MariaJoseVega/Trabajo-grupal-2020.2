@@ -15,7 +15,7 @@ Variables independientes a analizar en esta parte del entregable
       - Base de datos: dataayudafinal
       - Nombre de la variable independiente: Apoyo Economico
       - Fuente: Oxford University (Our Wold in Data)
-      - Año de información: 2020
+      - Año de información: 2020 (a 7 días del primer contagio de cada país)
       - variable: categórica
 - (3) Porcentaje de desempleo
       - Base de datos: datadesempleofinal
