@@ -1,0 +1,157 @@
+"fecha","pais","code","apoyo"
+2020-03-01,"Afghanistan","AFG",0
+2020-03-26,"Angola","AGO",0
+2020-03-16,"Albania","ALB",0
+2020-03-16,"Andorra","AND",2
+2020-02-12,"United Arab Emirates","ARE",0
+2020-03-16,"Argentina","ARG",0
+2020-02-01,"Australia","AUS",0
+2020-03-10,"Austria","AUT",0
+2020-03-15,"Azerbaijan","AZE",0
+2020-04-14,"Burundi","BDI",0
+2020-02-16,"Belgium","BEL",0
+2020-03-22,"Benin","BEN",0
+2020-03-16,"Burkina Faso","BFA",0
+2020-03-16,"Bangladesh","BGD",0
+2020-03-16,"Bulgaria","BGR",0
+2020-03-01,"Bahrain","BHR",0
+2020-03-16,"Bosnia and Herzegovina","BIH",1
+2020-03-13,"Belarus","BLR",0
+2020-03-29,"Belize","BLZ",1
+2020-03-17,"Bolivia","BOL",0
+2020-03-11,"Brazil","BRA",0
+2020-03-23,"Barbados","BRB",0
+2020-03-16,"Brunei","BRN",0
+2020-03-16,"Bhutan","BTN",0
+2020-04-13,"Botswana","BWA",1
+2020-03-21,"Central African Republic","CAF",1
+2020-02-01,"Canada","CAN",0
+2020-03-10,"Switzerland","CHE",0
+2020-02-29,"Chile","CHL",0
+2020-01-28,"China","CHN",0
+2020-03-17,"Cote d'Ivoire","CIV",0
+2020-03-16,"Cameroon","CMR",0
+2020-03-16,"Colombia","COL",0
+2020-03-16,"Costa Rica","CRI",0
+2020-03-18,"Cuba","CUB",0
+2020-03-16,"Cyprus","CYP",2
+2020-02-10,"Germany","DEU",0
+2020-03-24,"Djibouti","DJI",0
+2020-03-28,"Dominica","DMA",0
+2020-03-12,"Denmark","DNK",2
+2020-03-15,"Dominican Republic","DOM",0
+2020-03-10,"Algeria","DZA",0
+2020-03-15,"Ecuador","ECU",0
+2020-02-20,"Egypt","EGY",0
+2020-03-27,"Eritrea","ERI",0
+2020-02-15,"Spain","ESP",0
+2020-03-12,"Estonia","EST",2
+2020-03-19,"Ethiopia","ETH",0
+2020-02-12,"Finland","FIN",0
+2020-03-25,"Fiji","FJI",0
+2020-01-30,"France","FRA",0
+2020-03-20,"Gabon","GAB",0
+2020-02-14,"United Kingdom","GBR",0
+2020-03-11,"Georgia","GEO",0
+2020-03-20,"Ghana","GHA",0
+2020-03-19,"Guinea","GIN",0
+2020-03-23,"Gambia","GMB",0
+2020-03-11,"Greece","GRC",0
+2020-03-20,"Guatemala","GTM",0
+2020-03-18,"Guyana","GUY",0
+2020-03-17,"Honduras","HND",0
+2020-03-10,"Croatia","HRV",0
+2020-03-26,"Haiti","HTI",0
+2020-03-16,"Hungary","HUN",0
+2020-03-16,"Indonesia","IDN",0
+2020-02-13,"India","IND",0
+2020-03-14,"Ireland","IRL",0
+2020-02-25,"Iran","IRN",0
+2020-03-01,"Iraq","IRQ",0
+2020-03-13,"Iceland","ISL",0
+2020-02-27,"Israel","ISR",0
+2020-02-14,"Italy","ITA",0
+2020-03-17,"Jamaica","JAM",0
+2020-03-16,"Jordan","JOR",0
+2020-01-28,"Japan","JPN",0
+2020-03-19,"Kazakhstan","KAZ",1
+2020-03-19,"Kenya","KEN",0
+2020-02-10,"Cambodia","KHM",0
+2020-03-01,"Kuwait","KWT",0
+2020-03-30,"Laos","LAO",0
+2020-02-27,"Lebanon","LBN",0
+2020-03-22,"Liberia","LBR",0
+2020-03-30,"Libya","LBY",0
+2020-02-10,"Sri Lanka","LKA",0
+2020-05-19,"Lesotho","LSO",0
+2020-03-13,"Lithuania","LTU",0
+2020-03-14,"Luxembourg","LUX",0
+2020-03-16,"Latvia","LVA",2
+2020-03-16,"Morocco","MAR",0
+2020-03-16,"Moldova","MDA",0
+2020-03-26,"Madagascar","MDG",0
+2020-03-13,"Mexico","MEX",0
+2020-03-31,"Mali","MLI",0
+2020-03-16,"Mongolia","MNG",0
+2020-03-28,"Mozambique","MOZ",0
+2020-03-20,"Mauritania","MRT",0
+2020-03-24,"Mauritius","MUS",1
+2020-04-16,"Malawi","MWI",0
+2020-01-31,"Malaysia","MYS",0
+2020-03-20,"Namibia","NAM",0
+2020-03-26,"Niger","NER",0
+2020-03-13,"Nigeria","NGA",0
+2020-03-25,"Nicaragua","NIC",0
+2020-03-12,"Netherlands","NLD",0
+2020-03-11,"Norway","NOR",0
+2020-01-31,"Nepal","NPL",0
+2020-03-13,"New Zealand","NZL",0
+2020-03-01,"Oman","OMN",0
+2020-03-10,"Pakistan","PAK",0
+2020-03-16,"Panama","PAN",0
+2020-03-16,"Peru","PER",1
+2020-02-13,"Philippines","PHL",0
+2020-03-26,"Papua New Guinea","PNG",0
+2020-03-16,"Poland","POL",0
+2020-03-16,"Portugal","PRT",1
+2020-03-16,"Paraguay","PRY",0
+2020-03-14,"Qatar","QAT",0
+2020-03-20,"Kosovo","RKS",0
+2020-03-11,"Romania","ROU",0
+2020-02-14,"Russia","RUS",0
+2020-03-20,"Rwanda","RWA",0
+2020-03-16,"Saudi Arabia","SAU",0
+2020-03-19,"Sudan","SDN",0
+2020-03-16,"Senegal","SEN",0
+2020-01-29,"Singapore","SGP",0
+2020-04-14,"Sierra Leone","SLE",0
+2020-03-25,"El Salvador","SLV",0
+2020-03-12,"San Marino","SMR",1
+2020-03-22,"Somalia","SOM",0
+2020-03-16,"Serbia","SRB",0
+2020-04-16,"South Sudan","SSD",0
+2020-03-20,"Suriname","SUR",0
+2020-03-16,"Slovenia","SVN",0
+2020-02-15,"Sweden","SWE",0
+2020-03-20,"Eswatini","SWZ",0
+2020-03-20,"Seychelles","SYC",0
+2020-03-28,"Syria","SYR",0
+2020-03-25,"Chad","TCD",0
+2020-03-16,"Togo","TGO",0
+2020-01-28,"Thailand","THA",0
+2020-05-14,"Tajikistan","TJK",0
+2020-03-28,"Timor-Leste","TLS",0
+2020-03-20,"Trinidad and Tobago","TTO",0
+2020-03-16,"Tunisia","TUN",0
+2020-03-17,"Turkey","TUR",0
+2020-03-22,"Tanzania","TZA",0
+2020-03-27,"Uganda","UGA",0
+2020-03-16,"Ukraine","UKR",1
+2020-03-19,"Uruguay","URY",1
+2020-03-21,"Uzbekistan","UZB",0
+2020-03-20,"Venezuela","VEN",0
+2020-01-29,"Vietnam","VNM",0
+2020-04-16,"Yemen","YEM",0
+2020-03-16,"South Africa","ZAF",0
+2020-03-24,"Zambia","ZMB",0
+2020-03-26,"Zimbabwe","ZWE",0
