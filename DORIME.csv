@@ -1,0 +1,142 @@
+"Code","Fecha (Dia 7 de cada pais)","Pais","Apoyo Economico","Densidad (2018)","Desempleo (% al 2019)"
+"AFG",2020-03-28,"Afghanistan","Sin apoyo",56.937760009803,24
+"AGO",2020-04-04,"Angola","Sin apoyo",24.7130520574316,7
+"ALB",2020-03-17,"Albania","Sin apoyo",104.612262773723,14
+"AND",2020-03-28,"Andorra","Más del 50% del sueldo",163.842553191489,4
+"ARE",2020-03-26,"United Arab Emirates","Sin apoyo",135.609110109828,2
+"ARG",2020-03-14,"Argentina","Sin apoyo",16.2585100979651,8
+"AUS",2020-03-07,"Australia","Sin apoyo",3.24787091037205,6
+"AUT",2020-03-18,"Austria","Sin apoyo",107.127966860564,6
+"AZE",2020-03-19,"Azerbaijan","Sin apoyo",120.23431716463,5
+"BDI",2020-04-19,"Burundi","Sin apoyo",435.178271028037,NA
+"BEL",2020-03-17,"Belgium","Más del 50% del sueldo",377.379590488771,7
+"BEN",2020-04-12,"Benin","Sin apoyo",101.853919829727,1
+"BFA",2020-03-24,"Burkina Faso","Sin apoyo",72.1912828947368,77
+"BGD",2020-03-24,"Bangladesh","Sin apoyo",1239.57931166936,4
+"BGR",2020-03-17,"Bulgaria","Sin apoyo",64.7110998526161,6
+"BHR",2020-03-22,"Bahrain","Sin apoyo",2017.27369979138,4
+"BIH",2020-03-27,"Bosnia and Herzegovina","Menos del 50% del sueldo",64.92048828125,21
+"BLR",2020-04-06,"Belarus","Sin apoyo",46.7195037884204,1
+"BLZ",2020-04-12,"Belize","Menos del 50% del sueldo",16.7939938623411,9
+"BOL",2020-04-04,"Bolivia","Menos del 50% del sueldo",10.4801458506416,4
+"BRA",2020-03-23,"Brazil","Sin apoyo",25.0617162430876,13
+"BRB",2020-04-11,"Barbados","Menos del 50% del sueldo",666.606976744186,10
+"BRN",2020-04-03,"Brunei","Menos del 50% del sueldo",81.3969639468691,7
+"BWA",2020-04-06,"Botswana","Menos del 50% del sueldo",3.97742487604327,20
+"CAF",2020-05-29,"Central African Republic","Menos del 50% del sueldo",7.49041221227006,7
+"CAN",2020-03-15,"Canada","Más del 50% del sueldo",4.07518823864492,6
+"CHE",2020-03-11,"Switzerland","Sin apoyo",215.465350480429,3
+"CHL",2020-03-28,"Chile","Sin apoyo",25.1894460666519,7
+"CHN",2020-01-28,"China","Sin apoyo",148.348833270666,4
+"CIV",2020-04-04,"Cote d'Ivoire","Sin apoyo",78.8340534591195,9
+"CMR",2020-03-31,"Cameroon","Sin apoyo",53.3439889149796,4
+"COL",2020-03-28,"Colombia","Sin apoyo",44.7487021180712,9
+"COM",2020-05-12,"Comoros",NA,447.244477540227,7
+"CRI",2020-03-25,"Costa Rica","Sin apoyo",97.9130630630631,8
+"CUB",2020-03-24,"Cuba","Sin apoyo",108.999596231494,3
+"CYP",2020-03-28,"Cyprus","Más del 50% del sueldo",128.708333333333,NA
+"DEU",2020-03-15,"Germany","Sin apoyo",237.30759674834,4
+"DJI",2020-04-16,"Djibouti","Sin apoyo",41.3684210526316,NA
+"DNK",2020-03-20,"Denmark","Más del 50% del sueldo",137.976565849012,6
+"DOM",2020-03-23,"Dominican Republic","Sin apoyo",219.97857586421,5
+"DZA",2020-03-18,"Algeria","Sin apoyo",17.7300750711665,12
+"ECU",2020-03-20,"Ecuador","Sin apoyo",68.7886817522951,5
+"EGY",2020-03-14,"Egypt","Sin apoyo",98.8734692852479,12
+"ESP",2020-03-09,"Spain","Sin apoyo",93.6771974435832,17
+"EST",2020-03-31,"Estonia","Más del 50% del sueldo",30.4112491373361,6
+"ETH",2020-04-11,"Ethiopia","Sin apoyo",109.224559,18
+"FIN",2020-03-27,"Finland","Más del 50% del sueldo",18.1485472672831,9
+"GBR",2020-03-12,"United Kingdom","Sin apoyo",274.708981936924,4
+"GBR",2020-03-12,"United Kingdom","Sin apoyo",274.708981936924,4
+"GBR",2020-03-12,"United Kingdom","Sin apoyo",274.708981936924,4
+"GBR",2020-03-12,"United Kingdom","Sin apoyo",274.708981936924,4
+"GBR",2020-03-12,"United Kingdom","Sin apoyo",274.708981936924,4
+"GEO",2020-04-10,"Georgia","Sin apoyo",65.197330207495,12
+"GHA",2020-03-27,"Ghana","Sin apoyo",130.821429199262,12
+"GIN",2020-04-21,"Guinea","Menos del 50% del sueldo",50.5222122741332,3
+"GMB",2020-03-29,"Gambia","Sin apoyo",225.30652173913,NA
+"GRC",2020-03-17,"Greece","Sin apoyo",83.2651823118697,22
+"GTM",2020-03-22,"Guatemala","Sin apoyo",152.547125793206,2
+"GUY",2020-03-18,"Guyana","Sin apoyo",3.95734823469647,11
+"HND",2020-04-01,"Honduras","Sin apoyo",85.6870319063366,6
+"HRV",2020-03-25,"Croatia","Menos del 50% del sueldo",73.0493745532523,12
+"HTI",2020-04-11,"Haiti","Sin apoyo",403.59854862119,41
+"HUN",2020-03-21,"Hungary","Sin apoyo",107.981486799956,4
+"IDN",2020-03-17,"Indonesia","Sin apoyo",147.75219008926,5
+"IND",2020-03-17,"India","Sin apoyo",454.938072575247,9
+"IRL",2020-03-17,"Ireland","Menos del 50% del sueldo",70.6534475250399,7
+"IRN",2020-02-25,"Iran","Sin apoyo",50.222420123284,12
+"IRQ",2020-03-10,"Iraq","Sin apoyo",88.5305700354617,16
+"ISL",2020-03-23,"Iceland","Más del 50% del sueldo",3.51841396508728,3
+"ISR",2020-03-27,"Israel","Sin apoyo",410.480591497227,4
+"ITA",2020-02-27,"Italy","Sin apoyo",205.418372203713,11
+"JAM",2020-03-25,"Jamaica","Sin apoyo",270.993074792244,12
+"JOR",2020-04-02,"Jordan","Menos del 50% del sueldo",112.14249831043,18
+"JPN",2020-02-19,"Japan","Sin apoyo",347.073458415624,3
+"KAZ",2020-03-31,"Kazakhstan","Menos del 50% del sueldo",6.76982572137645,5
+"KEN",2020-04-01,"Kenya","Menos del 50% del sueldo",90.2994166637383,40
+"KWT",2020-04-10,"Kuwait","Menos del 50% del sueldo",232.172390572391,1
+"LBN",2020-03-16,"Lebanon","Sin apoyo",669.494134897361,10
+"LBR",2020-04-10,"Liberia","Sin apoyo",50.0309073920266,3
+"LBY",2020-04-08,"Libya","Sin apoyo",3.79563238119054,30
+"LKA",2020-04-03,"Sri Lanka","Sin apoyo",345.558922022006,4
+"LSO",2020-07-15,"Lesotho","Sin apoyo",69.437812911726,28
+"LTU",2020-03-27,"Lithuania","Sin apoyo",44.7230757742448,7
+"LUX",2020-03-20,"Luxembourg","Más del 50% del sueldo",250.185185185185,6
+"LVA",2020-04-09,"Latvia","Más del 50% del sueldo",30.9934705693149,9
+"MAR",2020-03-16,"Morocco","Sin apoyo",80.7285189334528,10
+"MDA",2020-03-24,"Moldova","Sin apoyo",94.2644302783293,4
+"MDG",2020-05-23,"Madagascar","Menos del 50% del sueldo",45.1398556204881,2
+"MEX",2020-03-25,"Mexico","Sin apoyo",64.9146264050001,3
+"MLI",2020-04-04,"Mali","Menos del 50% del sueldo",15.635015858186,8
+"MOZ",2020-05-31,"Mozambique","Sin apoyo",37.508535313716,25
+"MRT",2020-04-05,"Mauritania","Menos del 50% del sueldo",4.27216357815077,10
+"MUS",2020-03-27,"Mauritius","Menos del 50% del sueldo",623.30197044335,7
+"MWI",2020-04-13,"Malawi","Sin apoyo",192.440761561307,20
+"MYS",2020-03-23,"Malaysia","Sin apoyo",95.9628214883579,3
+"NAM",2020-07-16,"Namibia","Más del 50% del sueldo",2.97374558175127,34
+"NER",2020-03-31,"Niger","Sin apoyo",17.7176505881424,0
+"NGA",2020-03-29,"Nigeria","Sin apoyo",215.064988965381,17
+"NIC",2020-04-02,"Nicaragua","Sin apoyo",53.7270483629716,6
+"NLD",2020-03-12,"Netherlands","Sin apoyo",511.475927574948,5
+"NOR",2020-03-20,"Norway","Más del 50% del sueldo",14.5482916341657,4
+"NPL",2020-05-22,"Nepal","Menos del 50% del sueldo",195.939107080572,3
+"NZL",2020-04-04,"New Zealand","Más del 50% del sueldo",18.3851733697923,5
+"OMN",2020-04-06,"Oman","Sin apoyo",15.6041453957997,NA
+"PAK",2020-03-24,"Pakistan","Sin apoyo",275.289318700706,6
+"PAN",2020-03-17,"Panama","Sin apoyo",56.1860774818402,6
+"PER",2020-03-26,"Peru","Menos del 50% del sueldo",24.99160625,7
+"PHL",2020-02-08,"Philippines","Sin apoyo",357.688305329175,6
+"PNG",2020-08-02,"Papua New Guinea","Menos del 50% del sueldo",19.0043633794109,NA
+"POL",2020-03-18,"Poland","Menos del 50% del sueldo",124.023482151605,5
+"PRT",2020-03-23,"Portugal","Menos del 50% del sueldo",112.2619412173,9
+"PRY",2020-03-27,"Paraguay","Sin apoyo",17.5083589227284,6
+"QAT",2020-04-03,"Qatar","Más del 50% del sueldo",239.593195521103,9
+"ROU",2020-03-28,"Romania","Más del 50% del sueldo",84.633801286509,5
+"RUS",2020-03-25,"Russia","Sin apoyo",8.82206795315588,5
+"RWA",2020-06-05,"Rwanda","Sin apoyo",498.659870287799,3
+"SAU",2020-03-30,"Saudi Arabia","Sin apoyo",15.6766543082956,6
+"SDN",2020-03-19,"Sudan","Sin apoyo",NA,20
+"SEN",2020-04-07,"Senegal","Menos del 50% del sueldo",82.3474783150678,48
+"SGP",2020-03-27,"Singapore","Sin apoyo",7952.9984184018,2
+"SLE",2020-04-29,"Sierra Leone","Sin apoyo",105.987170961485,15
+"SLV",2020-04-06,"El Salvador","Menos del 50% del sueldo",309.881467181467,7
+"SMR",2020-03-09,"San Marino","Menos del 50% del sueldo",563.083333333333,8
+"SOM",2020-04-14,"Somalia","Sin apoyo",23.9234769024771,NA
+"SRB",2020-03-26,"Serbia","Sin apoyo",79.8376857992225,14
+"SSD",2020-05-21,"South Sudan","Menos del 50% del sueldo",NA,NA
+"SUR",2020-04-09,"Suriname","Sin apoyo",3.69225,9
+"SVN",2020-03-20,"Slovenia","Sin apoyo",102.96366052404,7
+"SWE",2020-03-16,"Sweden","Más del 50% del sueldo",24.9814981218237,7
+"SWZ",2020-04-22,"Eswatini","Sin apoyo",66.0576162790698,NA
+"SYR",2020-04-04,"Syria","Sin apoyo",92.0671077710614,50
+"TCD",2020-05-04,"Chad","Sin apoyo",12.2917336404066,NA
+"TGO",2020-04-02,"Togo","Sin apoyo",145.046773303916,7
+"THA",2020-03-07,"Thailand","Sin apoyo",135.897206835131,1
+"UZB",2020-04-02,"Uzbekistan","Sin apoyo",77.4708509637988,5
+"VEN",2020-04-02,"Venezuela","Sin apoyo",32.7307919052208,27
+"VNM",2020-08-06,"Vietnam","Menos del 50% del sueldo",308.125245912213,2
+"YEM",2020-05-06,"Yemen","Sin apoyo",53.9778529083092,27
+"ZAF",2020-04-02,"South Africa","Sin apoyo",47.6301197767684,28
+"ZMB",2020-04-08,"Zambia","Sin apoyo",23.3414789007116,15
+"ZWE",2020-03-29,"Zimbabwe","Sin apoyo",37.3245909267158,11
